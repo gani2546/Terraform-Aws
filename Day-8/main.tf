@@ -11,3 +11,9 @@ resource "aws_instance" "name" {
 locals {
   instance_name = "${terraform.workspace}-instace"
 }
+
+#create new workspace -- terraform workspace new dev
+#list workspace -- terraform workspace list
+#Switch worksapce -- terraform workspace select dev
+#terraform plan -var-file=dev.tfvars
+#terraform plan -var-file=test.tfvars
