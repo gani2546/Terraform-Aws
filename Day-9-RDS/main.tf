@@ -9,8 +9,5 @@ resource "aws_db_instance" "name" {
     publicly_accessible = true
     skip_final_snapshot = true
     db_name = "mydbrds"
-    tags = {
-      Name = "mydbrds"
-    }
 
 }
