@@ -1,3 +1,4 @@
+# Count function
 resource "aws_instance" "count" {
     ami = "ami-0453ec754f44f9a4a"
     instance_type = "t2.micro"
@@ -11,9 +12,9 @@ resource "aws_instance" "count" {
        Name = var.test[count.index]
     }
   
-}
+} 
 
 variable "test" {
   type    = list(string)
   default = ["Ironman", "Thanos", "Spiderman"]
-}
+} 

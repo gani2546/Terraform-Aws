@@ -1,4 +1,5 @@
 # for_each terraform code
+
 resource "aws_instance" "foreach" {
     ami = var.ami
     instance_type = var.instance_type
@@ -16,4 +17,4 @@ variable "test" {
     type = list(string)
     default = [ "Thor", "Knull", "Loki"]
   
-}
+} 
