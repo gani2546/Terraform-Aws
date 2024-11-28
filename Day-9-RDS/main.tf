@@ -11,3 +11,13 @@ resource "aws_db_instance" "name" {
     db_name = "mydbrds"
 
 }
+
+resource "aws_db_snapshot" "name" {
+    db_instance_identifier = "terraform-20241128202049073800000001"
+    db_snapshot_identifier = "my-db-snapshot"
+    depends_on = [ aws_db_instance.name ]
+    tags = {
+        Name = "mydbsnap"
+    }
+  
+}
