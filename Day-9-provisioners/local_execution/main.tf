@@ -1,7 +1,7 @@
 resource "aws_vpc" "test" {
     cidr_block = "10.0.0.0/16"
     tags = {
-      Name = "Thor"
+      Name = "Wolverine"
     }
   
 }
@@ -11,7 +11,7 @@ resource "aws_subnet" "test" {
     vpc_id = aws_vpc.test.id
     map_public_ip_on_launch = true
     tags = {
-      Name = "loki"
+      Name = "Deadpool"
     }
   
 }
@@ -19,7 +19,7 @@ resource "aws_subnet" "test" {
 resource "aws_internet_gateway" "my_ig" {
     vpc_id = aws_vpc.test.id
     tags = {
-        Name = "Groot"
+        Name = "Professor_X"
     }
   
 }
@@ -27,7 +27,7 @@ resource "aws_internet_gateway" "my_ig" {
 resource "aws_route_table" "my_rt" {
     vpc_id = aws_vpc.test.id
     tags = {
-      Name = "Tony"
+      Name = "Beast"
     }
     route {
         cidr_block = "0.0.0.0/0"
@@ -46,7 +46,7 @@ resource "aws_route_table_association" "test" {
 resource "aws_security_group" "name" {
     vpc_id = aws_vpc.test.id
     tags = {
-      Name = "Tom"
+      Name = "Mystique"
     }
 
     ingress {
@@ -86,6 +86,6 @@ resource "aws_instance" "server" {
 
     }
     tags = {
-      Name = "Marvel"
+      Name = "X-Men"
     }
 }
