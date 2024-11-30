@@ -1,0 +1,6 @@
+Terraform is an open-source tool that helps programmers build, change, and version infrastructure
+
+Terraform command
+#terraform init
+#terraform plan
+#terraform apply
